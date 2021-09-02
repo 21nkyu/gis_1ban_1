@@ -29,6 +29,7 @@ class ArticleCreateView(CreateView):
     def get_success_url(self):
         return reverse('articleapp:detail', kwargs={'pk': self.object.pk})
 
+
 class ArticleDetailView(DetailView, FormMixin):   #detailview임에도 create처럼 뭔가를 만들 수 있다
     model = Article
     form_class = CommentCreationForm
@@ -62,6 +63,7 @@ class ArticleDeleteView(DeleteView):
     context_object_name = 'target_article'
     success_url = reverse_lazy('articleapp:list') #글을 지욱나면 갈곳이 없기 때문에
     template_name = 'articleapp/delete.html'
+
 
 class ArticleListView(ListView):
     model = Article

@@ -6,6 +6,8 @@ from projectapp.models import Project
 
 
 class Article(models.Model):
+    class Meta:
+        ordering = ['-pk']
     writer = models.ForeignKey(User, on_delete=models.SET_NULL,
                                related_name='article', null=True)
 
