@@ -51,6 +51,7 @@ class ArticleUpdateView(UpdateView):
     #템플릿 어떤것을 사용할 것이냐
     template_name = 'articleapp/update.html'
     #routing을 해준다 urls
+
     def get_success_url(self):                       #어떤특정 계시글로 가라
         return reverse('articleapp:detail', kwargs={'pk': self.object.pk})
     # kwargs는 딕셔너리
