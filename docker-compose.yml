@@ -18,7 +18,7 @@ services:
     secrets:
       - DJANGO_SECRET_KEY
       - MARIADB_USER
-      - MARIADB_ROOT_PASSWORD
+      - MARIADB_PASSWORD
     volumes:
       - gis_1ban_static:/home/gis_1ban_1/staticfiles/
       - gis_1ban_media:/home/gis_1ban_1/media/
